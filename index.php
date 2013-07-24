@@ -32,7 +32,7 @@
     var_dump($timeline);
     echo '</pre>';
     
-    // Step 3b - Get 25 of @teemus' retweets
+    // Step 3b - Get 25 of your own tweets that were retweeted
     $url = 'https://api.twitter.com/1.1/statuses/retweets_of_me.json';
     $retweetsJson = $twitter->invokeAPI($url, 'GET', array('count' => '25'));
     $retweets = json_decode($retweetsJson, true);
