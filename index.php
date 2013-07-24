@@ -1,6 +1,6 @@
 <?php
     require ('./TwitterAPI.inc.php');
-    $appUrl = 'http://local.teemus.com/twitter/index.php';
+    $appUrl = 'http://'.$_SERVER['HTTP_HOST'].'/twitter/index.php';
     $twitter = new TwitterAPI($appUrl);
 
     // No oauth_verifier in URL. Do the 3-legged-OAuth-dance with Twitter, baby!
